@@ -1,0 +1,123 @@
+@media (max-width: 1100px) {
+  .container { padding: 0 26px; }
+
+  .hero { grid-template-columns: 1fr; gap: 60px; }
+  .hero-arrow { display: none; }
+
+  .empresa-grid { grid-template-columns: 1fr; gap: 40px; }
+  .empresa-title { font-size: 44px; }
+
+  .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-image-wrap { order: -1; }
+
+  .reurb-split { grid-template-columns: 1fr; gap: 36px; }
+  .reurb-divider { display: none; }
+  .social-float-facebook { left: 84px; }
+
+  .gestor-panel { grid-template-columns: 1fr; text-align: center; padding: 40px; }
+  .gestor-logo { margin: 0 auto; width: 260px; height: 260px; }
+
+  .central-grid { grid-template-columns: repeat(2, 1fr); }
+  .docs-grid { grid-template-columns: repeat(2, 1fr); }
+  .dash-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  .noticia-detail { grid-template-columns: 1fr; }
+  .contato-grid { grid-template-columns: 1fr; }
+
+  .feedback-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .timeline-wheel { width: 520px; }
+}
+
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+  .menu-toggle { display: flex; }
+
+  .header-inner .btn-contato { display: none; }
+
+  .main-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg-alt);
+    padding: 40px 30px;
+    gap: 26px;
+    font-size: 20px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  .main-nav.mobile-open .btn-contato { display: inline-block; margin-top: 10px; }
+
+  .section { padding: 60px 0; }
+  .section-title { font-size: 30px; }
+
+  .equipe-box { justify-content: center; }
+  .equipe-item { width: 45%; }
+
+  .servicos-grid { grid-template-columns: 1fr; }
+
+  .beneficio-item, .beneficio-item:nth-child(2), .beneficio-item:nth-child(3) {
+    max-width: 100%; margin-left: 0; flex-direction: column; text-align: center;
+  }
+
+  .diferenciais-grid { flex-direction: column; align-items: center; }
+
+  .timeline-wheel { width: 100%; max-width: 360px; }
+  .timeline-step { width: 90px; font-size: 9px; }
+  .timeline-center { font-size: 14px; }
+
+  .feedback-grid { grid-template-columns: 1fr; }
+
+  .noticia-item { grid-template-columns: 1fr; }
+
+  .central-grid { grid-template-columns: 1fr; }
+  .docs-grid { grid-template-columns: repeat(2, 1fr); }
+  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+
+  .hero-brand-name { font-size: 46px; }
+  .empresa-title { font-size: 34px; }
+
+  .gestor-title { font-size: 30px; }
+
+  .back-to-top { right: 88px; width: 44px; height: 44px; }
+  .whatsapp-float { width: 52px; height: 52px; }
+}
+
+@media (max-width: 520px) {
+  .container { padding: 0 18px; }
+  .logo-text { font-size: 15px; }
+  .logo img { height: 34px; }
+
+  .hero-brand-name { font-size: 34px; letter-spacing: 2px; }
+  .hero-badge { font-size: 16px; padding: 12px 18px; }
+
+  .section-title { font-size: 24px; gap: 10px; }
+  .section-title .wave-icon { height: 40px; }
+
+  .empresa-title { font-size: 28px; }
+  .empresa-text p { font-size: 15px; }
+
+  .servicos-title, .central-title { font-size: 28px; }
+
+  .docs-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .doc-icon { height: 90px; }
+
+  .dash-stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .dash-circle .num { font-size: 26px; }
+  .dash-circle .label { font-size: 10px; }
+
+  .noticia-detail-body h1 { font-size: 28px; }
+
+  .detail-title strong { font-size: 30px; }
+  .detail-title { font-size: 26px; }
+
+  .gestor-panel { padding: 26px; }
+
+  .central-pill { font-size: 18px; padding: 14px 26px; }
+}

@@ -1,0 +1,428 @@
+/* ============================================================
+   REDESIGN.CSS — visual refresh to match the new design (PDF)
+   Loaded after style.css / responsive.css / animations.css
+   ============================================================ */
+
+/* ---------- shared bits ---------- */
+.accent-bar {
+  width: 60px;
+  height: 4px;
+  background: var(--color-white);
+  border-radius: 3px;
+  margin: 14px 0 22px;
+}
+.accent-bar.teal { background: var(--color-bg); }
+
+.hero-desc {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* ---------- STATS BAR (home + servicos) ---------- */
+.stats-bar {
+  background: var(--color-section-light);
+  color: var(--color-teal-text-strong);
+  padding: 46px 0;
+}
+.stats-bar.on-dark {
+  background: var(--color-bg-soft);
+  color: var(--color-white);
+}
+.stats-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 30px;
+  border-right: 1px solid rgba(47,101,103,0.18);
+}
+.stats-bar.on-dark .stats-item { border-right-color: rgba(255,255,255,0.25); }
+.stats-item:first-child { padding-left: 0; }
+.stats-item:last-child { border-right: none; }
+
+.stats-icon {
+  min-width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats-bar.on-dark .stats-icon { border-color: var(--color-white); }
+.stats-icon svg { width: 30px; height: 30px; }
+
+.stats-number { font-family: var(--font-display); font-weight: 800; font-size: 30px; line-height: 1; }
+.stats-number span.unit { font-size: 16px; font-weight: 700; margin-left: 2px; }
+.stats-label { font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; margin-top: 4px; opacity: 0.9; }
+
+/* ---------- feature strip (Quem Somos icons) ---------- */
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: rgba(255,255,255,0.14);
+  border-radius: var(--radius-lg);
+  margin-top: 46px;
+  overflow: hidden;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 22px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.feature-item:last-child { border-right: none; }
+.feature-item svg { width: 34px; height: 34px; flex-shrink: 0; }
+.feature-item span { font-weight: 700; font-size: 14px; line-height: 1.35; }
+
+/* ---------- section on white bg (used inside teal page) ---------- */
+.section-light {
+  background: var(--color-white);
+  color: var(--color-teal-text-strong);
+  padding: 80px 0;
+}
+.section-light-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  max-width: 900px;
+  margin: 0 auto 10px;
+}
+.section-light-title strong { font-weight: 800; }
+.section-light .accent-bar { margin-left: auto; margin-right: auto; }
+
+/* ---------- desafios cards ---------- */
+.desafios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  margin-top: 50px;
+}
+.desafio-card {
+  background: var(--color-gray-card);
+  border-radius: var(--radius-lg);
+  padding: 60px 30px 34px;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+.desafio-icon-circle {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.desafio-icon-circle svg { width: 36px; height: 36px; color: var(--color-bg); }
+.desafio-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 12px; color: var(--color-teal-text-strong); }
+.desafio-card p { font-size: 14.5px; line-height: 1.6; color: #4a5c5d; margin-bottom: 22px; }
+.desafio-arrow { color: var(--color-bg); font-size: 20px; margin-bottom: 14px; }
+.desafio-solution { font-size: 17px; font-weight: 800; color: var(--color-bg); margin-bottom: 10px; }
+.desafio-card .solution-desc { font-size: 14px; color: #4a5c5d; }
+.desafio-card ul { text-align: left; list-style: disc; padding-left: 20px; font-size: 13.5px; color: #4a5c5d; line-height: 1.6; }
+
+/* ---------- Uma equipe integrada / atuação ---------- */
+.equipe-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 50px;
+  align-items: start;
+  padding: 70px 0;
+}
+.equipe-v2-divider { background: rgba(255,255,255,0.2); }
+.equipe-v2 h2 { font-size: 27px; font-weight: 800; line-height: 1.3; margin-bottom: 4px; }
+.equipe-v2 .lead { font-size: 15px; font-weight: 600; line-height: 1.65; margin: 18px 0 26px; opacity: 0.95; }
+
+.icon-grid2 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px 10px; margin-bottom: 26px; }
+.icon-grid2 .igi { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.icon-grid2 .igi svg { width: 34px; height: 34px; }
+.icon-grid2 .igi span { font-size: 11.5px; font-weight: 700; line-height: 1.3; }
+
+.equipe-note {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255,255,255,0.16);
+  border-radius: var(--radius-md);
+  padding: 22px 26px;
+}
+.equipe-note svg { width: 40px; height: 40px; flex-shrink: 0; }
+.equipe-note p { font-size: 14.5px; font-weight: 700; line-height: 1.5; }
+
+.atuacao-col h2 { font-size: 27px; font-weight: 800; margin-bottom: 20px; }
+.atuacao-inner { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center; }
+.brasil-map-wrap { position: relative; }
+.brasil-map-wrap svg { width: 100%; height: auto; max-width: 340px; }
+.atuacao-stats { display: flex; flex-direction: column; gap: 26px; min-width: 150px; }
+.atuacao-stat { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.atuacao-stat svg { width: 34px; height: 34px; margin-bottom: 4px; }
+.atuacao-stat .big { font-size: 30px; font-weight: 800; font-family: var(--font-display); }
+.atuacao-stat .lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
+.atuacao-stat.divider-top { border-top: 1px solid rgba(255,255,255,0.25); padding-top: 22px; }
+
+/* ---------- confiança section (certs + shields + cta) ---------- */
+.confianca-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 40px 0 56px; }
+.confianca-card {
+  background: rgba(255,255,255,0.14);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.confianca-card svg { width: 42px; height: 42px; flex-shrink: 0; }
+.confianca-card h4 { font-size: 15px; font-weight: 800; letter-spacing: 0.4px; margin-bottom: 8px; }
+.confianca-card p { font-size: 13.5px; line-height: 1.55; opacity: 0.92; }
+
+.municipios-title { font-size: 26px; font-weight: 800; margin-bottom: 26px; }
+.municipios-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x proximity;
+}
+.municipio-badge { flex: 0 0 auto; width: 110px; text-align: center; scroll-snap-align: start; }
+.municipio-shield {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg);
+  font-weight: 800;
+  font-size: 22px;
+}
+.municipio-badge span { font-size: 13px; font-weight: 700; }
+
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255,255,255,0.16);
+  border-radius: var(--radius-lg);
+  padding: 28px 34px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.cta-banner-left { display: flex; align-items: center; gap: 20px; }
+.cta-banner-left svg { width: 42px; height: 42px; flex-shrink: 0; }
+.cta-banner h4 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+.cta-banner p { font-size: 13.5px; opacity: 0.92; max-width: 480px; }
+.btn-pill-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  color: var(--color-teal-text-strong);
+  font-weight: 800;
+  font-size: 15px;
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: transform .2s ease;
+}
+.btn-pill-white:hover { transform: translateY(-2px); }
+.btn-pill-white svg { width: 20px; height: 20px; }
+
+/* ---------- REURB section (title + benefícios, two columns) ---------- */
+.reurb-split {
+  display: grid;
+  grid-template-columns: 1.35fr 1px 1fr;
+  gap: 56px;
+  align-items: start;
+  padding: 46px 0 70px;
+}
+.reurb-divider {
+  align-self: stretch;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+.reurb-benefits-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 29px;
+  line-height: 1.28;
+  margin-bottom: 6px;
+}
+.reurb-benefits-label {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  margin: 22px 0 4px;
+}
+.reurb-benefits .beneficios-icon-grid { margin-top: 26px; }
+
+/* fixed social icons, mirrors .whatsapp-float on the opposite corner */
+.social-float {
+  position: fixed;
+  bottom: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  transition: background .25s ease, color .25s ease, transform .2s ease;
+}
+.social-float:hover { background: var(--color-white); color: var(--color-teal-text); transform: translateY(-2px); }
+.social-float svg { width: 20px; height: 20px; }
+.social-float-instagram { left: 28px; }
+.social-float-facebook { left: 84px; }
+
+/* ---------- benefícios icon grid (REURB) ---------- */
+.beneficios-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px 30px;
+  margin-top: 30px;
+}
+.beneficio-icon-item { text-align: center; }
+.beneficio-icon-item .bi-circle {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+.beneficio-icon-item svg { width: 54px; height: 54px; }
+.beneficio-icon-item p { font-size: 12.5px; font-weight: 800; letter-spacing: 0.3px; line-height: 1.4; }
+.beneficios-divider { grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.2); margin: 4px 0; }
+
+/* ---------- timeline wheel v2 (SVG) ---------- */
+.wheel-v2-wrap { display: flex; justify-content: center; }
+.wheel-v2 { position: relative; width: 620px; max-width: 100%; }
+.wheel-v2 svg.wheel-svg { width: 100%; height: auto; display: block; }
+.wheel-v2-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--color-white);
+}
+.wheel-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  text-align: center;
+}
+.wheel-label .wl-num {
+  display: inline-flex;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-teal-text-strong);
+  align-items: center; justify-content: center;
+  font-size: 12.5px; font-weight: 800;
+  margin-bottom: 6px;
+}
+.wheel-label.is-active .wl-num { background: #3a3a3a; color: var(--color-white); }
+.wheel-label .wl-text {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: var(--color-teal-text-strong);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.wheel-label.is-active .wl-text { color: #1f3b3e; }
+.wheel-label svg.wl-icon { width: 26px; height: 26px; color: var(--color-teal-text-strong); }
+.wheel-label.is-active svg.wl-icon { color: #1f3b3e; }
+
+/* ---------- depoimentos v2 ---------- */
+.depoimentos-title { font-size: 28px; font-weight: 800; margin: 10px 0 26px; }
+.depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 50px; }
+.depoimento-card-v2 {
+  background: linear-gradient(155deg, #ffffff, #d7dbdb);
+  color: var(--color-teal-text-strong);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  min-height: 190px;
+}
+.depoimento-card-v2 h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+.depoimento-card-v2 .stars { margin-bottom: 12px; }
+.depoimento-card-v2 p { font-size: 13.5px; line-height: 1.55; }
+
+/* ---------- image asset fixes (real client icons/photos) ---------- */
+.icon-grid2 .igi img { width: 34px; height: 34px; object-fit: contain; }
+.wheel-label img.wl-icon { width: 26px; height: 26px; object-fit: contain; }
+.municipio-shield img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; padding: 6px; box-sizing: border-box; }
+
+/* confiança cards now come as ready-made image cards from the client */
+.confianca-card.img-card {
+  background: none;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.confianca-card.img-card img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+/* ---------- section-light context overrides ----------
+   equipe-v2 / atuação / confiança sit on a WHITE section in the real design,
+   so the translucent-white-on-teal components need on-white treatments */
+.section-light .equipe-v2-divider { background: #dfe6e6; }
+.section-light .equipe-note {
+  background: var(--color-gray-card);
+}
+.section-light .equipe-note svg { color: var(--color-bg); }
+.section-light .equipe-note p { color: var(--color-teal-text-strong); }
+.section-light .icon-grid2 .igi span { color: var(--color-teal-text-strong); }
+.section-light .atuacao-stat.divider-top { border-top-color: #dfe6e6; }
+.section-light .atuacao-stat svg,
+.section-light .atuacao-stat .big,
+.section-light .atuacao-stat .lbl { color: var(--color-teal-text-strong); }
+
+.section-light .cta-banner {
+  background: var(--color-bg);
+  color: var(--color-white);
+}
+.section-light .cta-banner-left svg { color: var(--color-white); }
+.section-light .cta-banner h4,
+.section-light .cta-banner p { color: var(--color-white); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .stats-bar-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 0; }
+  .stats-item { border-right: none; padding: 0 10px; }
+  .feature-strip { grid-template-columns: repeat(2, 1fr); }
+  .feature-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
+  .desafios-grid { grid-template-columns: 1fr; }
+  .equipe-v2 { grid-template-columns: 1fr; }
+  .equipe-v2-divider { display: none; }
+  .icon-grid2 { grid-template-columns: repeat(3, 1fr); }
+  .atuacao-inner { grid-template-columns: 1fr; }
+  .confianca-cards { grid-template-columns: 1fr; }
+  .beneficios-icon-grid { grid-template-columns: repeat(2, 1fr); }
+  .depoimentos-grid { grid-template-columns: 1fr; }
+  .cta-banner { flex-direction: column; align-items: flex-start; }
+  .wheel-v2 { width: 100%; }
+  .wheel-label { width: 100px; }
+  .wheel-label .wl-text { font-size: 9px; }
+}

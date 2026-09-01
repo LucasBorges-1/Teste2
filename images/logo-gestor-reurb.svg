@@ -1,0 +1,6 @@
+<svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+<polygon points="110,20 175,75 175,150 45,150 45,75" fill="none" stroke="#2b2560" stroke-width="11" stroke-linejoin="round"/>
+<polyline points="80,150 80,95 140,95 140,150" fill="none" stroke="#2b2560" stroke-width="11" stroke-linejoin="round"/>
+<text x="110" y="195" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="2" text-anchor="middle" fill="#8a8a8a">GESTOR</text>
+<text x="110" y="235" font-family="Poppins, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="1" text-anchor="middle" fill="#2b2560">REURB</text>
+</svg>

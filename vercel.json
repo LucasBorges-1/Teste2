@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "noticias.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/index.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/login.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/logout.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/noticia-form.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/noticia-delete.php", "use": "vercel-php@0.9.0" },
+    { "src": "admin/perfil.php", "use": "vercel-php@0.9.0" },
+    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "css/**", "use": "@vercel/static" },
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" },
+    { "src": "icons/**", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "uploads/**", "use": "@vercel/static" },
+    { "src": "admin/assets/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "^/data/.*", "status": 404 },
+    { "src": "^/includes/.*", "status": 404 },
+    { "src": "^/admin/includes/.*", "status": 404 },
+    { "src": "^/admin/?$", "dest": "/admin/index.php" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
