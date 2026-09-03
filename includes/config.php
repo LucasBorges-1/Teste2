@@ -7,8 +7,15 @@
 // Caminho absoluto da raiz do site
 define('BASE_PATH', dirname(__DIR__));
 
-// Pasta onde o banco de dados SQLite fica salvo (fora do acesso público direto)
-define('DB_PATH', BASE_PATH . '/data/database.sqlite');
+// --- Banco de dados (Turso / libSQL) ---
+// A Vercel roda funções serverless com sistema de arquivos somente-leitura,
+// então não é possível gravar num arquivo .sqlite local (era isso que
+// causava o erro "attempt to write a readonly database"). Agora o banco é
+// acessado via HTTP no Turso — configure estas duas variáveis de ambiente
+// no painel da Vercel (Project Settings > Environment Variables):
+//   TURSO_DATABASE_URL  -> ex: libsql://seu-banco-sua-org.turso.io
+//   TURSO_AUTH_TOKEN    -> gerado com `turso db tokens create <nome-do-banco>`
+// Veja includes/db.php para os detalhes da conexão.
 
 // Pasta onde as imagens das notícias enviadas pelo painel são salvas
 define('UPLOAD_DIR', BASE_PATH . '/uploads/noticias');
